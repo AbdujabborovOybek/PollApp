@@ -1,0 +1,53 @@
+📌 So'rovnoma Tizimi (Poll App) | Full Stack Web Dasturlash Darslari | JWT, Cookie, Auth, MySQL  
+🎓 Dasturchi: Oybek Abujabborov | abdujabborov.uz
+
+Assalomu alaykum! Bu video darsliklarda biz real hayotda qo‘llaniladigan
+So‘rovnoma Tizimi (Poll App) ni noldan to‘liq ishlab chiqamiz.
+Darslar ReactJS, NodeJS, ExpressJS, MySQL, JWT, Cookie va boshqa zamonaviy texnologiyalar asosida tuzilgan.
+
+
+💡 Siz bu darslik orqali o‘rganasiz:
+✅ ReactJS yordamida dinamik frontend yaratish  
+✅ NodeJS + Express orqali REST API tuzish  
+✅ MySQL orqali ma’lumotlar bilan ishlash  
+✅ JWT va Cookie bilan autentifikatsiya (auth tizimi)  
+✅ Public va Private savollar (protected routes)  
+✅ Foydalanuvchi faqat 1 marta ovoz bera olishi  
+✅ Real Full Stack loyiha tajribasi
+
+
+
+
+🔐 Texnologiyalar:
+- ReactJS, React Router, Axios  
+- NodeJS, ExpressJS  
+- MySQL + mysql2  
+- JWT (Json Web Token), HTTP-only Cookie  
+- Postman, VS Code, GitHub
+
+
+🧠 Source Code:
+📂 GitHub: https://github.com/AbdujabborovOybek/PollApp.git
+
+🌍 Demo / Web Sayt:
+📎 Sayt: https://poll.abdujabborov.uz
+
+
+🌐 Mening ijtimoiy sahifalarim:
+🔗 Sayt: https://abdujabborov.uz  
+📬 Telegram: https://t.me/AbdujabborovOybek  
+💻 GitHub: https://github.com/AbdujabborovOybek  
+📷 Instagram: https://www.instagram.com/abdujabborov_uz
+
+
+🎯 Bu darslar yangi o‘rganuvchilar va tajriba orttirishni istagan o‘rta darajadagi dasturchilar uchun juda foydali.
+
+Agar siz ham to‘liq bir loyiha ustida ishlashni o‘rganmoqchi bo‘lsangiz — to‘g‘ri joydasiz!
+
+
+👍 Videoga like bosishni, kanalimga obuna bo‘lishni va do‘stlaringiz bilan ulashishni unutmang!
+
+
+📌 Hashtaglar:
+#PollApp #ReactJS #NodeJS #FullStack #JWT #MySQL #WebDasturlash
+#OybekAbdujabborov #ExpressJS #Programmalash #DasturlashDarslari
