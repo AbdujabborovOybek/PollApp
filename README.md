@@ -169,8 +169,8 @@ npm start
 
 ## 🔐 Auth funksiyasi
 
-- JWT token backendda yaratiladi
-- HTTP-only cookie orqali saqlanadi
+- JWT + Cookie orqali autentifikatsiya
+- Access va Refresh tokenlar bilan ishlaydi
 - Foydalanuvchi tizimga kirgach, protected route’lardan foydalanadi
 - Public va Private savollar orasidagi farq frontendda ko‘rsatiladi
 
@@ -178,7 +178,7 @@ npm start
 
 ## 🌐 Live Demo & Muallif
 
-- 🔗 Sayt: [https://poll.abdujabborov.uz](https://poll.abdujabborov.uz) _(Agar mavjud bo‘lsa)_
+- 🔗 Sayt: _(Tez orada...)_
 - 🧑‍💻 Muallif: [abdujabborov.uz](https://abdujabborov.uz)
 - Telegram: [@AbdujabborovOybek](https://t.me/AbdujabborovOybek)
 - GitHub: [AbdujabborovOybek](https://github.com/AbdujabborovOybek)
