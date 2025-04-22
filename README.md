@@ -160,7 +160,7 @@ npm run dev
 ```bash
 cd ../client
 npm install
-npm start
+npm run dev
 ```
 
 ✅ Frontend `http://localhost:3000` da ishga tushadi. Backend esa `http://localhost:8080`.
