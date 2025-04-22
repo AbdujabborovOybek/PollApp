@@ -83,7 +83,6 @@ CREATE TABLE
         `action` ENUM (
             'login',
             'register',
-            'reset_password',
             'update_profile',
             'update_poll'
         ) NOT NULL,

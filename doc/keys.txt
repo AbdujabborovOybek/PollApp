@@ -1,0 +1,2 @@
+TG_BOT_USERNAME = https://t.me/PollAppSupportBot
+TG_BOT_TOKEN = 8117089516:AAHM67R-VayGW3HA5tbojr4DKgbAK5zsJ8c

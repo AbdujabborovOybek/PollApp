@@ -1,0 +1,105 @@
+🧑‍🏫 1-Dars: Kirish va Telegram orqali login (Auth boshlanishi)
+
+🎯 Maqsad:
+- Loyiha tushunchasi
+- Telegram bot orqali kirish mantig‘i
+- Auth uchun baza tayyorlash
+- JWT + cookie orqali tokenlarni yuborish
+
+📌 Amalga oshiriladigan ishlar:
+1. Loyiha tuzilmasi: React + Vite frontend va Express backend boshlanishi
+2. Telegram bot yaratish (BotFather orqali)
+3. verification_codes jadvaliga kod qo‘shish va tekshirish
+4. POST /auth/login endpoint:
+   - telegram_id orqali userni aniqlash
+   - random code generatsiya qilish
+   - code ni Telegram bot orqali yuborish
+5. Frontendda telefon raqami kiritish formasi va telegram orqali yuborilgan kodni qabul qilish formasi
+
+🧩 Mini Tasklar:
+- O‘z Telegram botingizni yarating va backendga token qo‘shing
+- Kod yuborish va verification_codes jadvaliga saqlash funksiyasini yozing
+- Kodni frontenddan kiritib, tokenlarni cookie orqali olishni bajaring
+
+------------------------------------------------
+
+🔐 2-Dars: JWT auth, refresh va logout + middleware
+
+🎯 Maqsad:
+- Access va Refresh tokenlar ishlashi
+- Middlewarelar bilan himoyalangan route yaratish
+
+📌 Amalga oshiriladigan ishlar:
+1. generateAccessToken va generateRefreshToken funksiyalarini yozish
+2. JWT tokenlarni HTTP Only cookie-da yuborish
+3. Middleware: authMiddleware – access tokenni tekshiradi
+4. POST /auth/refresh – refresh token orqali yangi access olish
+5. POST /auth/logout – tokenlarni o‘chirish
+6. GET /me – token asosida foydalanuvchini olish
+
+🧩 Mini Tasklar:
+- Middleware yozib, GET /me endpointni himoyalang
+- Refresh token ishlashini tekshirish
+- Logout qilganda cookie-larni tozalashni bajaring
+
+------------------------------------------------
+
+📊 3-Dars: So‘rovnoma (Poll) va variantlar (Options) yaratish
+
+🎯 Maqsad:
+- Poll CRUD
+- Poll variantlarini qo‘shish
+
+📌 Amalga oshiriladigan ishlar:
+1. POST /polls – yangi so‘rovnoma yaratish
+2. GET /polls – barcha ochiq (public) so‘rovnomalarni olish
+3. POST /polls/:pollId/options – pollga variantlar qo‘shish
+4. Frontendda so‘rovnoma formasi va dinamik variantlar yaratish
+
+🧩 Mini Tasklar:
+- Poll yaratish formasi yasang (savol, tur, yakunlanish vaqti)
+- Variantlarni inputlar orqali dinamik qo‘shish
+- Backendga polls va poll_options yuborishni yakunlash
+
+------------------------------------------------
+
+🗳 4-Dars: Ovoz berish va natijalarni chiqarish
+
+🎯 Maqsad:
+- Foydalanuvchilar ovoz berishi
+- Poll natijalarini ko‘rsatish
+
+📌 Amalga oshiriladigan ishlar:
+1. POST /polls/:pollId/vote – foydalanuvchi ovoz beradi
+   - Tekshiruv: foydalanuvchi avval ovoz berganmi?
+2. GET /polls/:pollId/results – natijalarni olish
+3. Frontend: ovoz berish formasi, resultlar grafigi (bar chart)
+
+🧩 Mini Tasklar:
+- Pollni tanlab, ovoz berish sahifasini yarating
+- Foydalanuvchi bir marta ovoz berganini aniqlang
+- Natijalarni grafik ko‘rinishda chizing (masalan, Recharts bilan)
+
+------------------------------------------------
+
+🎯 5-Dars: Private poll + UI polishing + Deploy
+
+🎯 Maqsad:
+- Private poll ishlashi
+- Profil sahifasi
+- UI polishing
+- Deployment
+
+📌 Amalga oshiriladigan ishlar:
+1. type_of_poll orqali pollni private yoki public qilish
+2. Private poll uchun kirish havolasi generatsiya qilish
+3. Profil sahifasi (o‘zi yaratgan polllar, ovoz bergan polllar)
+4. UI: mobilga moslashuv, form validation
+5. Deployment:
+   - Frontend: Vercel
+   - Backend: Render yoki Railway
+
+🧩 Mini Tasklar:
+- Private poll yarating va unga URL orqali kira olishni qo‘shing
+- Profil sahifasida foydalanuvchining polllarini ko‘rsating
+- Loyihani deploy qiling va ishlashini tekshirib chiqing
