@@ -1,0 +1,26 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables file
+# .env
+
+# Build output directories
+dist/
+build/
+uploads/
+
+# Log files
+*.log
+logs/
+
+# Runtime data
+*.pid
+
+# OS generated files
+.DS_Store
+
+# Coverage directory used by testing tools
+coverage/
+
+# Temporary files
+tmp/

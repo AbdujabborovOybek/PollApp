@@ -1,0 +1,102 @@
+.crate {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 30px;
+}
+
+.crate > h1 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.crate > p {
+  font-size: 18px;
+  color: #6b7280;
+  padding: 10px 0;
+}
+
+.crate-form {
+  max-width: 768px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #1f2937;
+  border-radius: 10px;
+  border-top: 4px solid #818df8;
+  padding: 40px;
+  margin-top: 30px;
+}
+
+.crate-form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.crate-form > label > span {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.crate-form > label input {
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  background: #2a3441;
+  color: #fff;
+  border: 2px solid #374151;
+  border-radius: 6px;
+  outline: none;
+}
+
+.crate-form > label input:focus {
+  border: 2px solid #818df8;
+  font-size: 16px;
+}
+
+.crate-form-options {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.crate-form-options > label {
+  width: calc((100% - 20px) / 2);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.crate-form-options > label > span {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.crate-form-options > label :where(input, select) {
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  background: #2a3441;
+  color: #fff;
+  border: 2px solid #374151;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+}
+
+.crate-form > button {
+  width: 100%;
+  height: 50px;
+  background: #6367f1;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}

@@ -49,3 +49,9 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+.login-form > a {
+  color: #818df8;
+  font-size: 14px;
+  text-decoration: none;
+}

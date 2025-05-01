@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./login.css";
 import { PatternFormat } from "react-number-format";
 
 export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const code = e.target.code.value.replace(/\s+/g, "");
     console.log(code);
   };
@@ -20,7 +21,16 @@ export default function Login() {
           name="code"
           autoComplete="off"
         />
+
         <button type="submit">Verify</button>
+
+        <a
+          href="https://t.me/PollAppSupportBot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get verification code
+        </a>
       </form>
     </div>
   );
