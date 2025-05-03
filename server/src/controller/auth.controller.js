@@ -16,7 +16,17 @@ class authController {
   }
 
   // Auth controller POST - api/auth/logout
-  async logout(req, res) {}
+  async logout(req, res) {
+    try {
+      const result = await authService.logout(req, res);
+      const { status, msg } = result;
+      return response[status](res, msg);
+    } catch (error) {
+      console.error(error);
+      const msg = "An error occurred while processing your request";
+      return response.error(res, msg);
+    }
+  }
 }
 
 module.exports = new authController();

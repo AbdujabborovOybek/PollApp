@@ -1,10 +1,13 @@
 -- 0. Foreign key cheklovlarini vaqtincha o'chirish
-SET foreign_key_checks = 0;
+SET
+    foreign_key_checks = 0;
 
 -- 1. SQL sozlamalari
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET
+    SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
-SET time_zone = "+00:00";
+SET
+    time_zone = "+00:00";
 
 -- 2. Userlar jadvali
 CREATE TABLE
@@ -94,6 +97,7 @@ CREATE TABLE
             'update_poll'
         ) NOT NULL,
         `user_id` CHAR(36) DEFAULT NULL,
+        `telegram_id` VARCHAR(64) DEFAULT NULL,
         `data` JSON DEFAULT NULL,
         `is_used` TINYINT (1) NOT NULL DEFAULT 0,
         `code` VARCHAR(10) NOT NULL,
