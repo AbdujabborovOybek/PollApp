@@ -11,7 +11,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors(config.cors));
 
+app.use("/api", require("./middleware/auth.middleware"));
 app.use("/api/auth", require("./router/auth.router"));
+app.use("/api/poll", require("./router/poll.router"));
 
 // 404 error handling middleware
 app.use((req, res, next) => {
