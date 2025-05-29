@@ -124,22 +124,22 @@ class pollValidation {
           },
         },
 
-        poll_type: {
+        type_of_poll: {
           type: "string",
-          enum: ["all", "single_choice", "multiple_choice"],
+          enum: ["all", "public", "private"],
           errorMessage: {
             type: "Poll type must be a string",
-            enum: "Poll type must be either 'all', 'single_choice', or 'multiple_choice'",
+            enum: "Poll type must be either 'all', 'public', or 'private'",
           },
         },
       },
-      required: ["status", "poll_type"],
+      required: ["status", "type_of_poll"],
       additionalProperties: false,
 
       errorMessage: {
         required: {
           status: "Status is required",
-          poll_type: "Poll type is required",
+          type_of_poll: "Poll type is required",
         },
         additionalProperties: `Additional properties are not allowed in the request body`,
       },

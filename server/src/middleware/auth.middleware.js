@@ -13,40 +13,42 @@ const setCookie = (res, type, token, exp) => {
 };
 
 const auth = async (req, res, next) => {
-  // Skip authentication for public routes
-  if (req.path.includes("/auth")) return next();
-  const { access_token, refresh_token } = req.cookies;
+  try {
+    // Skip authentication for public routes
+    if (req.path.includes("/auth")) return next();
+    const { access_token = null, refresh_token = null } = req.cookies;
 
-  if (access_token) {
-    const decoded = await jwt.verifyAccessToken(access_token);
-    if (decoded) {
-      req.user = decoded;
-      return next();
-    }
-  }
-
-  if (refresh_token) {
-    const decoded = await jwt.verifyRefreshToken(refresh_token);
-    if (decoded) {
-      const { user_id, telegram_id } = decoded;
-      const set = { user_id, telegram_id };
-      const newAccessToken = await jwt.generateAccessToken(set);
-      const exp = 15 * 60 * 1000; // 15 minutes
-      setCookie(res, "access_token", newAccessToken, exp);
-      req.user = set;
-      return next();
+    if (access_token) {
+      const decoded = await jwt.verifyAccessToken(access_token);
+      if (decoded) {
+        req.user = decoded;
+        return next();
+      }
     }
 
-    // If refresh token is invalid, clear the cookies
-    res.clearCookie("access_token");
-    res.clearCookie("refresh_token");
-    return response.error(res, 401, "Invalid refresh token");
-  }
+    if (refresh_token) {
+      const decoded = await jwt.verifyRefreshToken(refresh_token);
+      if (decoded) {
+        const { user_id, telegram_id } = decoded;
+        const set = { user_id, telegram_id };
+        const newAccessToken = await jwt.generateAccessToken(set);
+        const exp = 15 * 60 * 1000; // 15 minutes
+        setCookie(res, "access_token", newAccessToken, exp);
+        req.user = set;
+        return next();
+      }
 
-  // If no tokens are present, clear the cookies
-  res.clearCookie("access_token");
-  res.clearCookie("refresh_token");
-  return response.error(res, 401, "Unauthorized");
+      // If refresh token is invalid, clear the cookies
+      res.clearCookie("access_token");
+      res.clearCookie("refresh_token");
+      return response.error(res, 401, "Invalid refresh token");
+    }
+
+    return response.forbidden(res, "Authentication required");
+  } catch (error) {
+    console.error("Authentication error:", error);
+    return response.error(res, 500, "Internal server error");
+  }
 };
 
 module.exports = auth;

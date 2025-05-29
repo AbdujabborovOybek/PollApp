@@ -50,7 +50,7 @@ class pollService {
 
   // Poll service GET - api/poll/get
   async get(req, res) {
-    const { status = "all", poll_type = "all" } = req.query;
+    const { status = "all", type_of_poll = "all" } = req.query;
 
     try {
       let sql = `SELECT * FROM polls WHERE user_id = ?`;
@@ -62,10 +62,10 @@ class pollService {
         params.push(status);
       }
 
-      // Agar poll_type filterlangan bo‘lsa
-      if (poll_type !== "all") {
-        sql += ` AND poll_type = ?`;
-        params.push(poll_type);
+      // Agar type_of_poll filterlangan bo‘lsa
+      if (type_of_poll !== "all") {
+        sql += ` AND type_of_poll = ?`;
+        params.push(type_of_poll);
       }
 
       sql += ` ORDER BY created_at DESC`;

@@ -1,8 +1,11 @@
 import React, { memo } from "react";
 import "./layout.css";
 import { Outlet, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default memo(function Layout() {
+  const user = useSelector((state) => state.user);
+
   return (
     <div className="layout">
       <header className="header">
@@ -13,7 +16,7 @@ export default memo(function Layout() {
             <Link to="/polls">Polls</Link>
           </nav>
 
-          <Link to="/login">Login</Link>
+          {user ? <p>{user?.first_name}</p> : <Link to="/login">Login</Link>}
         </div>
       </header>
       <main className="layout-main">

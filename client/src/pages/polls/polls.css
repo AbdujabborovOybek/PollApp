@@ -1,0 +1,91 @@
+/* polls.css */
+.polls {
+  width: 100%;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.polls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filters {
+  display: flex;
+}
+
+.filter-select {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.polls-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.polls-table th,
+.polls-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.polls-table thead th {
+  background-color: #007bff;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.polls-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.polls-table tbody tr:hover {
+  background-color: #e6f7ff;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 1rem;
+}
+
+.polls-pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.polls-pagination button {
+  margin: 0 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.polls-pagination button:hover {
+  background-color: #007bff;
+  color: #fff;
+}

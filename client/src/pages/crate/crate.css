@@ -89,6 +89,16 @@
   font-size: 16px;
 }
 
+.crate-form-options-dynamic {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.crate-form-options-dynamic > label {
+  width: 100%;
+}
+
 .crate-form > button {
   width: 100%;
   height: 50px;

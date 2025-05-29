@@ -1,13 +1,44 @@
 import React, { useState } from "react";
 import "./login.css";
 import { PatternFormat } from "react-number-format";
+import { useVerifyMutation } from "../../context/service/auth.service.js";
+import { enqueueSnackbar } from "notistack";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-    const code = e.target.code.value.replace(/\s+/g, "");
-    console.log(code);
+  const [verify] = useVerifyMutation();
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+
+      const code = e.target.code.value.replace(/\s+/g, "");
+      const response = await verify({ code: Number(code) });
+
+      if (response.data) {
+        enqueueSnackbar(response?.data?.message, {
+          variant: response?.data?.variant,
+        });
+
+        dispatch({ type: "SET_USER", payload: response?.data?.innerData });
+        localStorage.setItem("user", JSON.stringify(response?.data?.innerData));
+        return navigate("/polls");
+      }
+
+      if (response.error) {
+        enqueueSnackbar(response?.error?.data?.message, {
+          variant: response?.error?.data?.variant,
+        });
+      }
+    } catch (error) {
+      enqueueSnackbar("An unexpected error occurred. Please try again.", {
+        variant: "error",
+      });
+      console.error("Error verifying code:", error);
+    }
   };
 
   return (
